@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="//code.tidio.co/q08b1h5jntzru2q6adozdletxhmwfipo.js" async></script>
-    <!-- Strict Security Headers (Protection against XSS, Injection, Framing) -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval';">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    
+
     <title>VanguardAI Cybernetics | Autonomous Enterprise Intelligence</title>
 
-    <!-- Tidio Widget Code -->
-    <script src="//code.tidio.co/q08b1h5jntzru2q6adozdletxhmwfipo.js" async></script>
+    <!-- Tidio / Chat Widget Integration -->
+    <script src="//code.tidio.co/q38blh5jntzru2q6aoxdzlatxhwvfips.js" async></script>
 
     <style>
         :root {
@@ -41,28 +39,28 @@
         }
 
         .brand-logo { font-size: 22px; font-weight: 800; color: var(--accent-cyan); letter-spacing: 1px; }
-        .badge { background: rgba(16, 185, 129, 0.1); color: var(--accent-green); padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; border: 1px solid var(--accent-green); }
+        .badge { background: rgba(16, 185, 129, 0.1); color: var(--accent-green); padding: 5px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; border: 1px solid rgba(16, 185, 129, 0.2); }
 
         .wrapper { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
         .hero-section { text-align: center; margin-bottom: 60px; }
-        .hero-section h1 { font-size: 48px; font-weight: 800; margin-bottom: 20px; background: linear-gradient(to right, #06b6d4, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-section h1 { font-size: 48px; font-weight: 800; margin-bottom: 20px; background: linear-gradient(to right, #f3f4f6, var(--accent-cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero-section p { font-size: 18px; color: var(--text-muted); max-width: 700px; margin: 0 auto; }
 
         .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-bottom: 60px; }
-        .feature-card { background: var(--card-bg); padding: 30px; border-radius: 12px; border: 1px solid var(--border-color); transition: 0.3s; }
+        .feature-card { background: var(--card-bg); padding: 30px; border-radius: 12px; border: 1px solid var(--border-color); transition: border-color 0.3s, transform 0.3s; }
         .feature-card:hover { border-color: var(--accent-cyan); transform: translateY(-3px); }
         .feature-card h3 { color: var(--accent-cyan); margin-bottom: 12px; font-size: 20px; }
         .feature-card p { color: var(--text-muted); font-size: 14px; }
 
-        .form-container { background: var(--card-bg); padding: 40px; border-radius: 16px; border: 1px solid var(--border-color); max-width: 650px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .form-container h2 { text-align: center; margin-bottom: 25px; color: var(--text-main); }
-        
+        .form-container { background: var(--card-bg); padding: 40px; border-radius: 16px; border: 1px solid var(--border-color); max-width: 700px; margin: 0 auto; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .form-container h2 { text-align: center; margin-bottom: 30px; font-size: 24px; color: var(--text-main); }
+
         .field-group { margin-bottom: 20px; }
         .field-group label { display: block; margin-bottom: 8px; color: var(--text-muted); font-size: 14px; }
-        .field-group input, .field-group textarea { width: 100%; padding: 12px 15px; border-radius: 8px; border: 1px solid var(--border-color); background: #030712; color: #fff; font-size: 15px; }
+        .field-group input, .field-group textarea { width: 100%; padding: 12px 15px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-main); font-size: 15px; }
         .field-group input:focus, .field-group textarea:focus { outline: none; border-color: var(--accent-cyan); }
-        
-        .btn-submit { width: 100%; background: linear-gradient(135deg, #06b6d4, #2563eb); color: #fff; border: none; padding: 14px; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer; transition: 0.2s; }
+
+        .btn-submit { width: 100%; background: linear-gradient(135deg, var(--accent-cyan), #2563eb); color: #fff; border: none; padding: 14px; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: opacity 0.3s; }
         .btn-submit:hover { opacity: 0.9; }
 
         #alert-box { margin-top: 20px; text-align: center; font-size: 14px; font-weight: 600; }
@@ -72,7 +70,7 @@
 
     <header>
         <div class="brand-logo">VANGUARD AI</div>
-        <div class="badge">● 200% High-Security Active</div>
+        <div class="badge">200% High-Security Active</div>
     </header>
 
     <div class="wrapper">
@@ -98,7 +96,7 @@
 
         <section class="form-container">
             <h2>Request Enterprise AI Setup</h2>
-            <form id="aiLeadForm" onsubmit="return processSecureForm(event)">
+            <form id="aiLeadForm" onsubmit="return processSecureFormEvent(event)">
                 <div class="field-group">
                     <label for="usr_name">Full Name</label>
                     <input type="text" id="usr_name" required maxlength="50" autocomplete="off">
@@ -124,17 +122,17 @@
         const TIME_WINDOW_MS = 60000; // 1 minute window
 
         function sanitizeInput(data) {
-            return data.replace(/[^a-zA-Z0-9 @.,?-]/g, ""); // Strips all malicious script characters
+            return data.replace(/[/<>&a-zA-Z0-9@.,?~-]/g, ""); // Strips all malicious script characters
         }
 
-        function processSecureForm(event) {
+        function processSecureFormEvent(event) {
             event.preventDefault();
             const alertBox = document.getElementById('alert-box');
             const now = Date.now();
 
             // Sliding Window Rate Limiting Check
             requestLogs = requestLogs.filter(timestamp => now - timestamp < TIME_WINDOW_MS);
-            
+
             if (requestLogs.length >= MAX_ALLOWED_REQUESTS) {
                 alertBox.style.color = '#ef4444';
                 alertBox.innerText = "SECURITY BLOCK: Rate limit exceeded (Sliding Window). Try again in 60 seconds.";
@@ -161,5 +159,6 @@
             return true;
         }
     </script>
+
 </body>
-</html>
+    </html>
